@@ -3,6 +3,11 @@
     font-family: "Poppins", serif;
     font-weight: 300;
     font-style: normal;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+   
+  
 }
 .contactSection p {
     font-size: 30px;

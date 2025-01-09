@@ -17,7 +17,7 @@ const Contact = () => {
     <div className="col-12 col-md-4 col-lg-4 text-center"><p><span><img src="/assets/instagram.png" alt="" width={40}/> </span> rangmohey.india</p></div>
     <div className="col-12 col-md-4 col-lg-4 text-start"><p><span><img src="/assets/facebook.png" alt="" width={40}/> </span> Rang Mohey</p></div>
   </div>
-  <div className="row mt-5"><p>Send a Message</p></div>
+  <div className="row text-center" style={{marginTop:"120px"}}><p>Send a Message</p></div>
   <Contactform/>
 </div>
   </section>

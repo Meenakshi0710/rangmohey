@@ -1,0 +1,53 @@
+
+  
+  /* Input Fields */
+  .form-control {
+    border: none;
+    border-radius: 15px;
+    padding: 12px 20px;
+    font-size: 24px;
+    background-color: #eee0e1; /* Light pink background */
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Message Textarea */
+  textarea.form-control {
+    resize: none;
+    height: 150px;
+  }
+  
+  /* Submit Button */
+  .btn-primary {
+    border: none;
+    border-radius: 15px;
+    padding: 12px 20px;
+    font-size: 20px;
+    background-color: #f18597; /* Slightly darker pink */
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 120px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #f06e84; /* Even darker pink */
+  }
+  
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .row .col {
+      margin-bottom: 15px;
+    }
+  }

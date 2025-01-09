@@ -1,0 +1,41 @@
+.aboutBanner img{
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+}
+  .aboutcontainer{
+    padding:120px 30px 120px 60px
+  }
+  .aboutSection{
+    background-image: url("/public/assets/rangmohey\ website\ design-12.jpg");
+    font-family: "Poppins", serif;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+   
+  }
+  .aboutSection .card{
+margin-top: 150px;
+margin-bottom: 150px !important;
+  }
+  .aboutSection img{
+    border: 10px solid #C88A90;
+  }
+  .aboutSection h1{
+    font-family: 'CustomFont', sans-serif;
+    color: #C88A90;
+    font-size: 80px;
+   
+  }
+  .custom-underline {
+    display: inline-block; /* Ensure underline adjusts to text width */
+    border-bottom: 3px solid #C88A90; /* Adjust thickness and color */
+  }
+  .aboutSection p{
+    margin-top: 40px;
+    font-size: 22px;
+    text-align: justify;
+  }
+  
