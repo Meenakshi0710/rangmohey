@@ -1,0 +1,12 @@
+.section{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.cardImage{
+    border-radius: 30px;
+    object-fit: cover;
+  height: 550px; /* Adjust height as needed */
+  width: 100%; /* Ensure full width */
+}

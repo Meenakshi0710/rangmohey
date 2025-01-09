@@ -1,0 +1,9 @@
+.contactSection{
+    background-image: url("/public/assets/rangmohey\ website\ design-12.jpg");
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.contactSection p {
+    font-size: 30px;
+}
