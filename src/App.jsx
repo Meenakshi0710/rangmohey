@@ -8,12 +8,22 @@ import Footer from './Components/Footer/Footer';
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet
+  Outlet,
+  useLocation
 } from 'react-router-dom';
+import Navbar2 from './Components/Navbar2/Navbar2';
+import { useEffect, useState } from 'react';
+
 const Layout = () =>{
+  const location = useLocation()
+  const [showNavbar2, setShowNavbar2] = useState(false);
+  useEffect(() => {
+    setShowNavbar2(location.pathname === "/about");
+  }, [location]);
   return(
     <div className="app">
-      <Navbar/>
+       {/* Conditional Navbar Rendering */}
+       {showNavbar2 ? <Navbar2 /> : <Navbar />}
       <Outlet/>
       <Footer/>
     </div>

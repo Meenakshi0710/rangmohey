@@ -3,24 +3,21 @@ import "./About.css"
 const About = () => {
   return (
    <>
+   <section className="aboutHero">
+  <img src="/assets/aboutHero.jpg" alt="Hero Section Image" className="img-fluid w-100" />
+  <div className="hero-content d-flex flex-column justify-content-start">
+    <h1>Hidden</h1>
+    <h1>Gems</h1>
+    <p>Embrace tradition with our stunning ethnic wear that celebrate cultural heritage </p>
+  </div>
+</section>
 
-  <div className="container-fluid p-0">
-      <div className="row g-0">
-        <div className="col-12">
-          <div className="aboutBanner">
-            <img
-              src="/assets/aboutHero.jpg" /* Replace with your image path */
-              alt="Banner"
-              className="img-fluid banner-image"
-            />
-            <div className="banner-text d-flex flex-column justify-content-center align-items-center">
-              <h1 className="text-white display-4">Welcome to Our Website</h1>
-              <p className="text-white lead">Your tagline goes here</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  
+
+
+  
+         
+        
 
    <section className='aboutSection'>
 <div className="aboutcontainer">

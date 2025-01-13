@@ -1,0 +1,59 @@
+.aboutNavbar{
+    position: fixed;
+    width: 100%;
+    background: rgba(235, 196, 187, 0.6);
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .aboutNavbar .logo{
+    height: 90px; /* Adjust as needed */
+    width: auto;
+    max-height: 100px;
+    margin: 10px 0px 15px 30px;
+    
+  }
+  .aboutNavbar  .nav-link {
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+  .aboutNavbar .nav-link:hover{
+    color: black;
+  }
+  .aboutNavbar .navbar-nav .nav-link {
+    color: black; /* Maintain original color */
+  }
+  
+  .aboutNavbar .navbar-nav .nav-link.active {
+    color: black !important; /* Prevent color change on active state */
+    background-color: transparent !important; /* Remove background highlight */
+    border-bottom: 1px solid black!important;
+  }
+  
+  .aboutNavbar .searchButton{
+    
+    color: black;
+    padding:10px 25px;
+    font-size: 25px;
+    font-weight: 200;
+    background: rgb(243, 175, 175);
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+  .aboutNavbar .searchButton:hover{
+    background: rgba(243, 145, 145, 0.7);
+    color: black;
+  }
+  .aboutNavbar .nav-underline{
+    font-weight: 100!important;
+  }
+  
+  @media (max-width: 768px) {
+    .logo {
+      height: 60px; /* Responsive size for smaller screens */
+    }
+  }

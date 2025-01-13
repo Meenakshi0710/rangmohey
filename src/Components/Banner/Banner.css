@@ -1,16 +1,42 @@
-.banner {
-    position: relative;
-    overflow: hidden;
-  }
-
-.banner  img{
-    width: 100vw;
-            height: 100%;
-            object-fit: cover;
-            filter: blur(6px);
+.banner{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
-.banner-content {
-    
-  }
+
+
+.banner-image{
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(6px);
+  
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+ width: 100%;
+  height: 100%;
+
+}
+
+.overlay-image {
+ width: 100%;
+ height: 100%;
+}
+.overlay-text h1{
+  font-family: 'CustomFont2', sans-serif;
+  
+  line-height: 1;
+}
+.overlay-text .sharp-white-line {
+  background-color: white;
+    height: 3px;  /* Height of the line */
+    width: 180px;  /* Width of the line */
+    clip-path: polygon(0% 0%, 10% 50%, 0% 100%, 100% 100%, 90% 50%, 100% 0%);
+  
+}
+
 
  

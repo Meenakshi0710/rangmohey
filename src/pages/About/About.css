@@ -1,10 +1,18 @@
-.aboutBanner img{
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    
+.aboutHero {
+  position: relative;
+  min-height: 100vh;
 }
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+
+
   .aboutcontainer{
     padding:120px 30px 120px 60px
   }

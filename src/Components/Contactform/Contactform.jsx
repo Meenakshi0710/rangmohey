@@ -1,17 +1,39 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import "./Contactform.css"
+import emailjs from '@emailjs/browser';
+const Result = () =>{
+  return(
+      <p>Your message has been successfully sent</p>
+  )
+}
 
 const Contactform = () => {
+ 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_1hoqnnu', 'template_ydcojyl', form.current, 'HPgte57NTxyh20h5s')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+
+  };
   return (
-    <div className="row justify-content-center">
-      <div className="col-md-8">
-        <form>
+    <div className="row justify-content-center contactForm">
+      <div className="col-md-10">
+        <form ref={form} onSubmit={sendEmail}>
           <div className="row mb-5">
             <div className="col">
               <input
                 type="text"
                 className="form-control"
                 placeholder="Name"
+                name='name'
                 required
               />
             </div>
@@ -20,6 +42,7 @@ const Contactform = () => {
                 type="text"
                 className="form-control"
                 placeholder="Phone"
+                name='phone'
                 required
               />
             </div>
@@ -30,6 +53,7 @@ const Contactform = () => {
                 type="email"
                 className="form-control"
                 placeholder="Email"
+                name='email'
                 required
               />
             </div>
@@ -38,6 +62,7 @@ const Contactform = () => {
                 type="text"
                 className="form-control"
                 placeholder="Subject"
+                name='subject'
                 required
               />
             </div>
@@ -47,6 +72,7 @@ const Contactform = () => {
               className="form-control"
               rows="4"
               placeholder="Message"
+              name='message'
               required
             ></textarea>
           </div>
