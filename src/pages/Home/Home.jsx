@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import Banner from "../../Components/Banner/Banner";
 import Slider from "../../Components/Slider/Slider";
-import MainBanner from "../../Components/Banner/MainBanner";
+
 import Metadata from "../../Components/Metadata";
 
 const Home = () => {
