@@ -8,6 +8,12 @@
     font-weight: 300;
     font-style: normal;
   }
+ .navbar-scrolled2 {
+    background: rgba(235, 196, 187, 0.9); /* Darker opaque background on scroll */
+  }
+  .navbar-unscrolled2 {
+    background: rgba(235, 196, 187, 0.6); /* Darker opaque background on scroll */
+  }
   .aboutNavbar .logo{
     height: 90px; /* Adjust as needed */
     width: auto;
@@ -31,7 +37,6 @@
   .aboutNavbar .navbar-nav .nav-link.active {
     color: black !important; /* Prevent color change on active state */
     background-color: transparent !important; /* Remove background highlight */
-    border-bottom: 1px solid black!important;
   }
   
   .aboutNavbar .searchButton{

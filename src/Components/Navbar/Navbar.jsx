@@ -1,53 +1,104 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import "./Navbar.css"
-
 import {Link} from 'react-router-dom'
+import emailjs from '@emailjs/browser';
+const Result = () =>{
+  return(
+      <p>Your message has been successfully sent</p>
+  )
+}
 const Navbar = () => {
- 
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolling(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+   
+  }, []);
   const ref = useRef(null);
   const refClose = useRef(null);
-  
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+console.log("in send email")
+    emailjs.sendForm('service_1hoqnnu', 'template_ydcojyl', form.current, 'HPgte57NTxyh20h5s')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+
+  };
 
     const handleClick = () =>{
       ref.current.click();
     }
-    const handleChange = () =>{
-
-    }
+    
   return (
     <>
     
-    <nav className="navbar navbar-expand-lg mainNavbar">
-    <div className="container-fluid">
-    <Link to = "/" ><img src="/assets/black and white  logo.png " alt="Logo" className='logo'/></Link>
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse  justify-content-center nav-underline" id="navbarSupportedContent">
-        <ul className="navbar-nav mb-2 mb-lg-0">
+
+
+    <nav className={`navbar navbar-expand-lg mainNavbar ${scrolling ? "navbar-scrolled" : "navbar-unscrolled"}`}>
+  <div className="container-fluid">
+    <Link to="/">
+      <img src="/assets/black and white  logo.png" alt="Logo" className="logo" />
+    </Link>
+    <button
+      className="navbar-toggler ms-auto"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse justify-content-center nav-underline" id="navbarSupportedContent">
+      <ul className="navbar-nav mb-2 mb-lg-0">
         <li className="nav-item me-3">
-          <Link className="nav-link" to="/">Home</Link>
+          <Link className="nav-link navLinks" to="/">Home</Link>
         </li>
         <li className="nav-item me-3">
-          <Link className="nav-link" to="/about">About Us</Link>
+          <Link className="nav-link navLinks" to="/about">About Us</Link>
         </li>
-        <li className="nav-item me-3">
-          <Link className="nav-link" to="#">Categorize</Link>
+        <li className="nav-item dropdown me-3">
+          <Link className="nav-link dropdown-toggle navLinks" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categories
+          </Link>
+          <ul className="dropdown-menu">
+            <li><Link className="dropdown-item" to="/category/lehngas">Lehngas</Link></li>
+            <li><Link className="dropdown-item" to="/category/indowestern">IndoWestern</Link></li>
+           
+          
+          </ul>
         </li>
+       
         <li className="nav-item">
-          <Link className="nav-link" to="/contact">Contact Info</Link>
+          <Link className="nav-link navLinks" to="/contact">Contact Info</Link>
         </li>
-         
-         
-        </ul>
-        </div>
-        <div className="d-flex justify-content-end me-4">
-        <button class="btn searchButton" type="submit" onClick={handleClick}>Enquire Now</button>
-        </div>
-      
-    </div>
-  </nav>
+        
+      </ul>
+      <div className="d-lg-none mt-3">
+        <button className="btn searchButton" type="button" onClick={handleClick}>
+          Enquire Now
+        </button>
+      </div>
    
+  </div>
+  <div className="ms-auto d-none d-lg-block">
+      <button className="btn searchButton" type="submit" onClick={handleClick}>
+        Enquire Now
+      </button>
+    </div>
+  </div>
+</nav>
+
 {/*Enquire Now Form*/}
   <button
         ref={ref}
@@ -80,13 +131,14 @@ const Navbar = () => {
               ></button>
             </div>
             <div className="modal-body">
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
           <div className="row mb-5">
             <div className="col">
               <input
                 type="text"
                 className="form-control"
                 placeholder="Name"
+                 name='name'
                 required
               />
             </div>
@@ -95,6 +147,7 @@ const Navbar = () => {
                 type="text"
                 className="form-control"
                 placeholder="Phone"
+                 name='phone'
                 required
               />
             </div>
@@ -105,6 +158,7 @@ const Navbar = () => {
                 type="email"
                 className="form-control"
                 placeholder="Email"
+                 name='email'
                 required
               />
             </div>
@@ -113,6 +167,7 @@ const Navbar = () => {
                 type="text"
                 className="form-control"
                 placeholder="Subject"
+                 name='subject'
                 required
               />
             </div>
@@ -122,6 +177,7 @@ const Navbar = () => {
               className="form-control"
               rows="4"
               placeholder="Message"
+               name='message'
               required
             ></textarea>
           </div>
@@ -129,7 +185,7 @@ const Navbar = () => {
             </div>
             <div className="modal-footer d-flex justify-content-between">
              
-              <button type="button" className="btn searchButton">
+              <button type="submit" className="btn searchButton">
                 Send Message
               </button>
               <button

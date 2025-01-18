@@ -5,6 +5,7 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
+import Category from './pages/Category/Category';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -46,7 +47,10 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact/>,
       },
-      
+      {
+        path: "/category/:categoryName", // Add Dynamic Category Route
+        element: <Category/> ,
+      },
       
     ]
   },

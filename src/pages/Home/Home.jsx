@@ -1,10 +1,16 @@
 import React from "react";
 import "./Home.css";
 import Banner from "../../Components/Banner/Banner";
+import Slider from "../../Components/Slider/Slider";
+import MainBanner from "../../Components/Banner/MainBanner";
+import Metadata from "../../Components/Metadata";
 
 const Home = () => {
   return (
+    <>
+     <Metadata title="Home | RangMohey" />
     <div className="home">
+    
       <Banner />
 
       <section className="aboutSection">
@@ -79,72 +85,60 @@ const Home = () => {
       {/*best collection*/}
       <section className="section">
         <h2
-          style={{ fontSize: "100px", marginBottom: "70px",fontWeight:"400"}}
-          className="text-center"
+          style={{ }}
+          className="text-center bestHeading"
         >
           Best collection
         </h2>
-        <div className="row row-cols-1 row-cols-md-3 g-3">
-          <div className="col">
-            <div className="card border-0 h-100">
-              <img
-                src="/assets/card1.jpg"
-                className="card-img-top cardImage img-fluid"
-                alt="..."
-              />
-            </div>
-          </div>
-          <div className="col">
-            <div className="card border-0 h-100">
-              <img
-                src="/assets/card2.jpg"
-                className="card-img-top cardImage img-fluid"
-                alt="..."
-              />
-            </div>
-          </div>
-          <div className="col">
-            <div className="card border-0 h-100">
-              <img
-                src="/assets/card3.jpg"
-                className="card-img-top cardImage image-fluid"
-                alt="..."
-              />
-            </div>
-          </div>
-        </div>
+       
+        <Slider/>
       </section>
 
       {/*Section 3*/}
-      <section>
+    
+      <section className="belowHero">
+  <img src="/assets/1036B2.jpg" alt="Hero Section Image" className="img-fluid w-100" />
+  <div className="below-hero-content d-flex justify-content-center align-items-center">
+    <div className="row text-center container-fluid">
+    <div className="col-md-7 mb-4">
+    <div className="row row-cols-2 row-cols-md-2 g-4">
+  <div className="col">
+    <div className="card h-100 border-0 bg-transparent">
+      <img src="/assets/1030B.jpg" className="card-img-top below-hero-images img-fluid" alt="..."/>
      
-      <div class="hero-section">
-    <div class="overlay"></div>
-    <div class="container d-flex h-100">
-      <div class="row w-100 align-items-center">
-       
-        <div class="col-md-6 col-12 d-flex justify-content-center image-group">
-          <img src="https://via.placeholder.com/150" alt="Image 1" class="img-fluid"/>
-          <img src="https://via.placeholder.com/150" alt="Image 2" class="img-fluid"/>
-          <img src="https://via.placeholder.com/150" alt="Image 3" class="img-fluid"/>
-          <img src="https://via.placeholder.com/150" alt="Image 4" class="img-fluid"/>
-        </div>
-
-       
-        <div class="col-md-6 hero-text">
-          <h1>Welcome to Our Website</h1>
-          <p>Discover more about our services and how we can help you achieve your goals. Get in touch with us today!</p>
-        </div>
-      </div>
     </div>
   </div>
-
-
-
-
-
-      </section>
+  <div className="col">
+    <div className="card h-100 border-0 bg-transparent">
+      <img src="/assets/1031.jpg" className="card-img-top below-hero-images" alt="..."/>
+    
     </div>
+  </div>
+  <div className="col">
+    <div className="card h-100 border-0 bg-transparent">
+      <img src="/assets/1033.jpg" className="card-img-top below-hero-images" alt="..."/>
+    
+    </div>
+  </div>
+  <div className="col">
+    <div className="card h-100 border-0 bg-transparent">
+      <img src="/assets/1034.jpg" className="card-img-top below-hero-images" alt="..."/>
+      
+    </div>
+  </div>
+</div>
+  </div>
+      <div className="col-md-5 d-flex flex-column justify-content-center align-items-center">
+        <img src="/assets/Rangmoheylogo.jpg "  alt="Logo" className="img-fluid mb-3" style={{height:"150px", width:"auto"}} />
+    <h1 className='display-5 text-center'>chic</h1>
+    <h1 className='display-5 text-center'>Essentials</h1>
+    <p className='lead text-center'>an equisite array of subtle yet striking pieces that redefine contemporary chic </p>
+  </div>
+  </div>
+  </div>
+</section>
+    </div>
+    </>
   );
 };
 

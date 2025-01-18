@@ -8,3 +8,10 @@ footer{
 .heading{
     font-size: 30px;
 }
+.list-unstyled .links{
+  text-decoration: none!important;
+  color: inherit;
+}
+.list-unstyled .links :hover{
+  font-weight: 400;
+}

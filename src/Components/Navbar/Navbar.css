@@ -1,7 +1,7 @@
 .mainNavbar{
   position: fixed;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
+ 
   z-index: 1000;
   transition: background 0.3s ease-in-out;
   font-family: "Poppins", serif;
@@ -15,26 +15,31 @@
   margin: 10px 0px 15px 30px;
   
 }
-.mainNavbar .nav-link {
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+
+.mainNavbar .navLinks {
   color: white;
   text-decoration: none;
   font-size: 25px;
   text-transform: uppercase;
 }
-.mainNavbar .nav-link:hover{
+.mainNavbar .navLinks:hover{
   color: white;
 }
-.mainNavbar .navbar-nav .nav-link {
-  color: white; /* Maintain original color */
-}
 
-.mainNavbar .navbar-nav .nav-link.active {
+
+
+.mainNavbar .navLinks .active {
   color: white !important; /* Prevent color change on active state */
   background-color: transparent !important; /* Remove background highlight */
-  border-bottom: 2px solid white!important;
+ 
 }
 
-.mainNavbar .searchButton{
+ .searchButton{
   
   color: white;
   padding:10px 25px;
@@ -51,6 +56,13 @@
 .mainNavbar .nav-underline{
   font-weight: 200!important;
 }
+.navbar-scrolled {
+  background: rgba(0, 0, 0, 0.9); /* Darker opaque background on scroll */
+}
+.navbar-unscrolled {
+  background: rgba(0, 0, 0, 0.6); /* Darker opaque background on scroll */
+}
+
 
 @media (max-width: 768px) {
   .logo {

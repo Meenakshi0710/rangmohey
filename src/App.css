@@ -10,4 +10,11 @@
     font-weight: bold;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'CustomFont3';
+    src: url('./fonts/baskervi.ttf ') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+ 
   

@@ -1,8 +1,17 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import "./Navbar2.css"
 import {Link} from 'react-router-dom'
 
 const Navbar2 = () => {
+  const [scrolling, setScrolling] = useState(false);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        setScrolling(window.scrollY > 100);
+      };
+      window.addEventListener("scroll", handleScroll);
+     
+    }, []);
     const ref = useRef(null);
     const refClose = useRef(null);
    
@@ -14,7 +23,7 @@ const Navbar2 = () => {
       }
   return (
   <>
-   <nav className="navbar navbar-expand-lg aboutNavbar">
+   <nav className={`navbar navbar-expand-lg aboutNavbar ${scrolling ? "navbar-scrolled2" : "navbar-unscrolled2"}`}>
     <div className="container-fluid">
     <Link to = "/" ><img src="/assets/Rangmoheylogo.jpg " alt="Logo" className='logo'/></Link>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,18 +37,31 @@ const Navbar2 = () => {
         <li className="nav-item me-3">
           <Link className="nav-link" to="/about">About Us</Link>
         </li>
-        <li className="nav-item me-3">
-          <Link className="nav-link" to="#">Categorize</Link>
-        </li>
+         <li className="nav-item dropdown me-3">
+                 <Link className="nav-link dropdown-toggle navLinks" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Categories
+                 </Link>
+                 <ul className="dropdown-menu">
+                   <li><Link className="dropdown-item" to="/category/lehngas">Lehngas</Link></li>
+                   <li><Link className="dropdown-item" to="/category/indowestern">IndoWestern</Link></li>
+                  
+                 
+                 </ul>
+               </li>
         <li className="nav-item">
           <Link className="nav-link" to="/contact">Contact Info</Link>
         </li>
          
          
         </ul>
+        <div className="d-lg-none mt-3">
+        <button className="btn searchButton" type="button" onClick={handleClick}>
+          Enquire Now
+        </button>
+      </div>
         </div>
-        <div className="d-flex justify-content-end me-4">
-        <button class="btn searchButton" type="submit" onClick={handleClick}>Enquire Now</button>
+        <div className="ms-auto d-none d-lg-block">
+        <button className="btn searchButton" type="submit" onClick={handleClick}>Enquire Now</button>
         </div>
       
     </div>

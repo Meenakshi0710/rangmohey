@@ -4,11 +4,12 @@
     margin-left: 40px;
     margin-right: 40px;
 }
-.cardImage{
-    border-radius: 30px;
-    object-fit: cover;
-  height: 550px; /* Adjust height as needed */
-  width: 100%; /* Ensure full width */
+.bestHeading{
+  font-size: 80px; 
+  margin-bottom: 70px;
+  font-weight:400;
+  font-family:"customFont3";
+  text-transform:uppercase;
 }
 
 .aboutcontainer{
@@ -45,57 +46,72 @@ margin-bottom: 150px !important;
   text-align: justify;
 }
 
-.hero-section {
+
+.belowHero {
   position: relative;
-  background-image: url('/assets/1036B2.jpg'); /* Background Image */
-  background-size: cover;
-  background-position: center;
-  height: 150vh;
-  color: white;
+  
 }
-.overlay {
+
+
+.below-hero-content {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(128, 128, 128, 0.5); ; /* Greyish Tint */
+ 
+  color: black;
+
+ width: 100%;
+ height: 100%;
+ background-color: rgba(128, 128, 128, 0.5); ; /* Greyish Tint */
+ 
+  padding: 20px;
 }
-.hero-content {
-  position: relative;
-  z-index: 1;
+.below-hero-images{
+ 
+  height: 400px;
+  width: 100%;   /* Flexible width */
+  object-fit: cover; /* or 'contain' depending on desired fit */
+  border-radius: 40px;
 }
-.image-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+.below-hero-content h1{
+  font-family: 'CustomFont3';
+  
+  font-size: 5vw;
+  text-transform: uppercase;
 }
-.image-group img {
-  width: 100%;
-  margin-bottom: 10px;
+.below-hero-content p{
+ 
+  font-size: 25px;
+  color: white;
+
 }
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-.hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-.hero-text p {
-  font-size: 1.2rem;
-}
+
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .image-group {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  .below-hero-images {
+    height: 300px;
   }
-  .hero-text h1 {
-    font-size: 2.5rem;
+
+  .below-hero-content h1 {
+    font-size: 6vw;
+  }
+
+  .below-hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .below-hero-images {
+    height: 250px;
+  }
+
+  .below-hero-content h1 {
+    font-size: 7vw;
+  }
+
+  .below-hero-content p {
+    font-size: 0.9rem;
   }
 }

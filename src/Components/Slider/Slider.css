@@ -1,0 +1,24 @@
+.productCardColor {
+    margin: 8px; /* Adjust the value to control the gap */
+  }
+  
+  .slick-slide {
+    padding: 0 8px; /* Optional: Adds more consistent spacing */
+  }
+.cardImage{
+    border-radius: 30px;
+    object-fit: cover;
+ height: 550px;
+  width: 100%; /* Ensure full width */
+}
+@media (max-width: 768px) {
+    .cardImage {
+      height: 300px; /* Adjust for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cardImage {
+      height: 250px;
+    }
+  }
