@@ -4,12 +4,14 @@ import Banner from "../../Components/Banner/Banner";
 import Slider from "../../Components/Slider/Slider";
 
 import Metadata from "../../Components/Metadata";
+import MainBanner from "../../Components/Banner/MainBanner";
 
 const Home = () => {
   return (
     <>
-     <Metadata title="Home | RangMohey" />
+   
     <div className="home">
+      <MainBanner/>
     
       <Banner />
 

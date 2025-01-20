@@ -1,0 +1,17 @@
+.banner{
+  position: relative;
+  height: 150vh; /* Adjust based on your requirements */
+  overflow: hidden;
+}
+
+
+.banner > img{
+  filter: blur(6px);
+  position: absolute;
+    top: 0;
+    left: 0;
+   max-width: 100%;
+    height: auto;
+  object-fit: cover;
+  z-index: -1;
+}

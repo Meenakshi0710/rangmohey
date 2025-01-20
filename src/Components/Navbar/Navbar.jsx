@@ -40,9 +40,7 @@ console.log("in send email")
     
   return (
     <>
-    
-
-
+   
     <nav className={`navbar navbar-expand-lg mainNavbar ${scrolling ? "navbar-scrolled" : "navbar-unscrolled"}`}>
   <div className="container-fluid">
     <Link to="/">
