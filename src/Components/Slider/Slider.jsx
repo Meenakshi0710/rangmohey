@@ -31,12 +31,13 @@ const Slider = () => {
     autoplay: true,
     infinite: true,
     speed: 500,
-    slidesToShow: window.innerWidth < 600 ? 2 : 3,
+    slidesToShow: window.innerWidth < 768 ? (window.innerWidth < 480 ? 1 : 2) : 3,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
   return (
+    <div className="container-fluid py-4">
     <Slider2 {...settings}>
       <div className="productCardColor">
         <div className="card h-100 border-0">
@@ -84,6 +85,7 @@ const Slider = () => {
         </div>
       </div>
     </Slider2>
+    </div>
   );
 };
 

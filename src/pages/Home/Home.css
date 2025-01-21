@@ -1,43 +1,14 @@
 
 .bestHeading{
   font-size: 80px; 
-  margin-bottom: 70px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   font-weight:400;
   font-family:"customFont3";
   text-transform:uppercase;
 }
 
 
-.aboutSection{
-  background-image: url("/assets/rangmohey\ website\ design-12.jpg");
-  font-family: "Poppins", serif;
-  background-size: cover; /* Ensures the image covers the entire area */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents tiling */
-  padding:120px 30px 120px 60px
-}
-.aboutSection .card{
-margin-top: 150px;
-margin-bottom: 150px !important;
-}
-.aboutSection img{
-  border: 10px solid #C88A90;
-}
-.aboutSection h1{
-  font-family: 'CustomFont', sans-serif;
-  color: #C88A90;
-  font-size: 80px;
- 
-}
-.custom-underline {
-  display: inline-block; /* Ensure underline adjusts to text width */
-  border-bottom: 3px solid #C88A90; /* Adjust thickness and color */
-}
-.aboutSection p{
-  margin-top: 40px;
-  font-size: 22px;
-  text-align: justify;
-}
 
 
 .belowHero {
@@ -76,6 +47,153 @@ margin-bottom: 150px !important;
  
   font-size: 25px;
   color: white;
+
+}
+
+/*About hero*/
+
+.aboutSection{
+  background-image: url("/assets/rangmohey\ website\ design-12.jpg");
+  font-family: "Poppins", serif;
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  padding:120px 40px 120px 40px
+}
+.aboutSection .card{
+margin-top: 150px;
+margin-bottom: 150px !important;
+}
+.aboutSection img{
+  border: 10px solid #C88A90;
+}
+.aboutSection h1{
+  font-family: 'CustomFont', sans-serif;
+  color: #C88A90;
+  font-size: 80px;
+ 
+}
+.custom-underline {
+  display: inline-block; /* Ensure underline adjusts to text width */
+  border-bottom: 3px solid #C88A90; /* Adjust thickness and color */
+}
+.aboutSection p{
+  margin-top: 40px;
+  font-size: 22px;
+  text-align: justify;
+}
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+.aboutSection h1 {
+  font-size: 80px;
+}
+
+.aboutSection p {
+  font-size: 25px;
+}
+
+.aboutSection .card {
+  margin-top: 100px;
+  margin-bottom: 100px !important;
+}
+
+.aboutSection img {
+  max-width: 100%;
+  border-width: 8px;
+}
+
+
+}
+
+@media (max-width: 992px) {
+.aboutSection h1 {
+  font-size: 60px;
+}
+
+.aboutSection p {
+  font-size: 20px;
+}
+
+.aboutSection .card {
+  margin-top: 100px;
+  margin-bottom: 100px !important;
+}
+
+.aboutSection img {
+  max-width: 100%;
+  border-width: 8px;
+}
+.bestHeading{
+  font-size: 60px;
+}
+
+}
+
+@media (max-width: 768px) {
+.aboutSection h1 {
+  font-size: 50px;
+  
+}
+
+.aboutSection p {
+  font-size: 18px;
+}
+
+.aboutSection .card {
+  margin-top: 50px;
+  margin-bottom: 50px !important;
+}
+
+.aboutSection img {
+  max-width: 100%;
+  border-width: 6px;
+}
+
+.aboutSection .card-body {
+  padding: 10px;
+}
+
+.bestHeading{
+  font-size: 40px;
+}
+
+/* Adjust the layout for smaller screens */
+
+}
+
+@media (max-width: 576px) {
+.hero-content{
+  padding-top: 40px;
+}
+.aboutSection h1 {
+  font-size: 40px;
+}
+
+.aboutSection p {
+  font-size: 16px;
+}
+
+.aboutSection .card {
+  margin-top: 30px;
+  margin-bottom: 30px !important;
+}
+
+.aboutSection img {
+  max-width: 100%;
+  border-width: 5px;
+}
+
+.aboutSection .card-body {
+  padding: 5px;
+}
+
+.bestHeading{
+  font-size: 30px;
+}
+/* Further reduce image margin for mobile screens */
 
 }
 
