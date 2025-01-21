@@ -92,7 +92,7 @@ const Home = () => {
           Best collection
         </h2>
        
-     
+        <Slider/>
       </section>
 
       {/*Section 3*/}
