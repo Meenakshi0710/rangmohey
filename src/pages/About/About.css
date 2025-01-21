@@ -58,6 +58,19 @@ margin-bottom: 150px !important;
     font-size: 22px;
     text-align: justify;
   }
+
+
+  .contactSection{
+    background-image: url("/assets/rangmohey\ website\ design-12.jpg");
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+   padding-top: 200px;
+  
+}
   /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-content {
