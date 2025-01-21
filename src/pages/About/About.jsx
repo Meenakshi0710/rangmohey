@@ -5,7 +5,21 @@ const About = () => {
   return (
    <>
     <Metadata title="About us | RangMohey" />
-  
+   <section className="aboutHero">
+  <img src="/assets/aboutHero.jpg" alt="Hero Section Image" className="img-fluid w-100" />
+ 
+    <div className="container">
+    <div className="hero-content ">
+      <div className="row">
+      <div className="col-md-6 col-lg-5 ">
+    <h1 className='text-center'>Hidden</h1>
+    <h1 className='text-center'>Gems</h1>
+    <p className='text-center'>Embrace tradition with our stunning ethnic wear that celebrate cultural heritage </p>
+  </div>
+  </div>
+  </div>
+  </div>
+</section>
 
 
 
@@ -18,10 +32,10 @@ const About = () => {
 
 <div className="card mb-3 border-0 bg-transparent" >
   <div className="row g-4">
-    <div className="col-md-5">
+    <div className="col-md-5 col-12">
       <img src="/assets/png images-02.jpg" className="img-fluid" alt="..."/>
     </div>
-    <div className="col-md-7">
+    <div className="col-md-7 col-12">
       <div className="card-body">
         <h1 className="card-title custom-underline">WEDDING TALES</h1>
         <p className="card-text">Introducing Wedding Tales—a bridal collection designed to
@@ -42,7 +56,7 @@ start to your forever story</p>
 <div className="card border-0 bg-transparent" >
   <div className="row g-4">
    
-    <div className="col-md-7">
+    <div className="col-md-7 col-12">
       <div className="card-body">
         <h1 className="card-title custom-underline text-center">RUHANIYAT</h1>
         <p className="card-text">Step into the world of Ruhaniyat, where tradition meets e
@@ -59,7 +73,7 @@ of artistry and grace.</p>
       </div>
     </div>
 
-  <div className="col-md-5">
+  <div className="col-md-5 col-12">
       <img src="/assets/png images-02.jpg" className="img-fluid" alt="..."/>
     </div>
     </div>
