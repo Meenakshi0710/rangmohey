@@ -1,5 +1,6 @@
+
 .productCardColor {
-    margin: 8px; /* Adjust the value to control the gap */
+    margin: 8px; /* Adjust the value to control the gap*/ 
   }
   
   .slick-slide {
@@ -10,6 +11,7 @@
     object-fit: cover;
  height: 550px;
   width: 100%; /* Ensure full width */
+  display: block; /* Ensure no overflow */
 }
 @media (max-width: 768px) {
     .cardImage {

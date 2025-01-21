@@ -26,7 +26,7 @@ const About = () => {
         
 
    <section className='aboutSection'>
-<div className="aboutcontainer">
+
 <div className="card mb-3 border-0 bg-transparent" >
   <div className="row g-4">
     <div className="col-md-5">
@@ -75,7 +75,7 @@ of artistry and grace.</p>
     </div>
     </div>
 </div>
-</div>
+
    </section>
    </>
   )
