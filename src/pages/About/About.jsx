@@ -10,15 +10,13 @@ const About = () => {
  
     <div className="container">
     <div className="hero-content ">
-      <div className="row">
-      <div className="col-md-6 col-lg-5 ">
-    <h1 className='text-center'>Hidden</h1>
-    <h1 className='text-center'>Gems</h1>
-    <p className='text-center'>Embrace tradition with our stunning ethnic wear that celebrate cultural heritage </p>
+     
+    <h1>Hidden</h1>
+    <h1>Gems</h1>
+    <p >Embrace tradition with our stunning ethnic wear that celebrate cultural heritage </p>
   </div>
   </div>
-  </div>
-  </div>
+  
 </section>
 
 
