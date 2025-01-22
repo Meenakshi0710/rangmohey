@@ -18,7 +18,8 @@
 .hero-overlay {
   z-index: 1;
   color: white;
- padding-left: 150px;
+  padding: 0 20px;
+  text-align: center;
 
  
   
@@ -27,20 +28,21 @@
 
 .hero-overlay h1{
   font-family: 'CustomFont2', sans-serif;
-  
+  font-size: 8vw; /* Responsive font size */
   line-height: 0.7;
 }
 
 .hero-overlay .sharp-white-line {
   background-color: white;
-    height: 3px;  /* Height of the line */
-    width: 180px;  /* Width of the line */
-    clip-path: polygon(0% 0%, 10% 50%, 0% 100%, 100% 100%, 90% 50%, 100% 0%);
+  height: 3px;
+  width: 20vw; /* Relative width */
+  clip-path: polygon(0% 0%, 10% 50%, 0% 100%, 100% 100%, 90% 50%, 100% 0%);
+  margin: 0 auto; /* Center line */
   
 }
 .overlay-image{
-  max-width: 50%;
-  height: 100%; /* Full height */
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
   object-fit: cover;
   position: absolute;
   bottom: 0;
@@ -63,5 +65,38 @@
   color: white;
 }
 
+/* Media Queries */
+@media (min-width: 768px) {
+  .hero-overlay {
+    padding: 0 50px;
+    text-align: left;
+  }
 
+  .hero-overlay h1 {
+    font-size: 4vw; /* Larger font size for medium screens */
+  }
+
+  .hero-overlay .sharp-white-line {
+    width: 150px; /* Adjust for medium screens */
+  }
+
+  .aboutButton {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-overlay {
+    padding: 0 150px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 3vw; /* Even larger font size for large screens */
+  }
+
+  .aboutButton {
+    font-size: 24px;
+    padding: 10px 40px;
+  }
+}
  
