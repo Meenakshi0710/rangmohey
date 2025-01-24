@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useLocation } from "react-router-dom";
 import "./Navbar.css"
 import {Link} from 'react-router-dom'
 import emailjs from '@emailjs/browser';
@@ -8,22 +9,30 @@ const Result = () =>{
   )
 }
 const Navbar = () => {
-  const [scrolling, setScrolling] = useState(false);
+  const [scrolling, setScrolling] = useState(false); 
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolling(window.scrollY > 100);
+      setScrolling(window.scrollY > window.innerHeight);
     };
     window.addEventListener("scroll", handleScroll);
-   
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
+  useEffect(() => {
+    // Scroll to the top on route change
+    window.scrollTo(0, 0);
+  }, [location]); // Runs on route change
   const ref = useRef(null);
   const refClose = useRef(null);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-console.log("in send email")
+
     emailjs.sendForm('service_1hoqnnu', 'template_ydcojyl', form.current, 'HPgte57NTxyh20h5s')
       .then((result) => {
           console.log(result.text);
@@ -179,22 +188,23 @@ console.log("in send email")
               required
             ></textarea>
           </div>
+          <div className="modal-footer d-flex justify-content-between">
+             
+             <button type="submit" className="btn searchButton">
+               Send Message
+             </button>
+             <button
+               ref = {refClose}
+               type="button"
+               className="btn searchButton"
+               data-bs-dismiss="modal"
+             >
+               Close
+             </button>
+           </div>
         </form>
             </div>
-            <div className="modal-footer d-flex justify-content-between">
-             
-              <button type="submit" className="btn searchButton">
-                Send Message
-              </button>
-              <button
-                ref = {refClose}
-                type="button"
-                className="btn searchButton"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-            </div>
+           
           </div>
         </div>
       </div>

@@ -1,0 +1,129 @@
+.Hero {
+    position: relative;
+   
+  
+  
+    width: 100%;
+    height: auto; /* Allow the container to grow with content */
+   
+    background-image: url('/assets/1036B.jpg'); /* Use as a background */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+  
+  }
+  .Hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; /* Inherit the background image */
+    background-size: inherit;
+    background-position: inherit;
+    background-repeat: inherit;
+    filter: blur(6px); /* Apply blur only to the pseudo-element */
+    z-index: 1; /* Place it beneath the content */
+}
+  .above-hero-content {
+    position: relative; /* Adjust from absolute to relative */
+    z-index: 2; /* Higher z-index to appear above the pseudo-element */
+    width: 100%;
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure content wraps on smaller viewports */
+   
+    color: white;
+  }
+  .above-hero-image {
+    height: 1000px;
+    width: 100%; /* Flexible width */
+    object-fit: cover; /* or 'contain' depending on desired fit */
+   
+  }
+  .above-hero-content h1 {
+    font-family: 'CustomFont2', sans-serif;
+    font-size: 12vw; /* Responsive font size */
+    line-height: 0.7;
+  }
+  .above-hero-content p {
+    font-size: 2 rem;
+    color: white;
+  }
+  .aboutButton{
+  
+    color: white;
+    padding:5px 40px;
+    font-size: 35px;
+    font-weight: 300;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+  .aboutButton:hover{
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+  }
+
+  @media (max-width: 992px) {
+   
+    .above-hero-image {
+        height: 800px;
+        
+       
+      }
+   
+    /* Adjust the layout for smaller screens */
+  }
+  
+  @media (max-width: 768px) {
+   .above-hero-content{
+    padding-top: 220px;
+    flex-direction: column;
+      text-align: center;
+   }
+    .above-hero-image {
+        height: 800px;
+        
+       
+      }
+    .above-hero-content h1 {
+      font-size: 16vw;
+    }
+  
+    .above-hero-content p {
+      font-size: 1.6rem;
+    }
+    /* Adjust the layout for smaller screens */
+  }
+  
+  @media (max-width: 576px) {
+   
+    /* Further reduce image margin for mobile screens */
+    .above-hero-content {
+        padding-top: 180px;
+     
+    }
+  
+    .above-hero-image {
+        height: 600px;
+        
+       
+      }
+  
+    .above-hero-content h1 {
+      font-size: 12vw;
+    }
+  
+    .above-hero-content p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  
+  
+  
+    

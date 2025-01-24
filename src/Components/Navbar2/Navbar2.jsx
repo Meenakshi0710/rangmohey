@@ -144,22 +144,23 @@ const Navbar2 = () => {
               required
             ></textarea>
           </div>
+          <div className="modal-footer d-flex justify-content-between">
+             
+             <button type="button" className="btn searchButton">
+               Send Message
+             </button>
+             <button
+               ref = {refClose}
+               type="button"
+               className="btn searchButton"
+               data-bs-dismiss="modal"
+             >
+               Close
+             </button>
+           </div>
         </form>
             </div>
-            <div className="modal-footer d-flex justify-content-between">
-             
-              <button type="button" className="btn searchButton">
-                Send Message
-              </button>
-              <button
-                ref = {refClose}
-                type="button"
-                className="btn searchButton"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-            </div>
+           
           </div>
         </div>
       </div>

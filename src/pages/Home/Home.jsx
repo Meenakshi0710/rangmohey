@@ -6,11 +6,12 @@ import Slider from "../../Components/Slider/Slider";
 import Metadata from "../../Components/Metadata";
 import MainBanner from "../../Components/Banner/MainBanner";
 import Header from "../../Components/Header/Header";
+import HeroSection from "../../Components/Banner/HeroSection";
 
 const Home = () => {
   return (
     <>
-      <MainBanner />
+      <HeroSection/>
 
       <section className="aboutSection container-fluid">
         <div className="card mb-3 border-0 bg-transparent">
