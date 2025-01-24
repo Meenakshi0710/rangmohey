@@ -4,7 +4,7 @@ import Banner from "../../Components/Banner/Banner";
 import Slider from "../../Components/Slider/Slider";
 
 import Metadata from "../../Components/Metadata";
-import MainBanner from "../../Components/Banner/MainBanner";
+
 import Header from "../../Components/Header/Header";
 import HeroSection from "../../Components/Banner/HeroSection";
 

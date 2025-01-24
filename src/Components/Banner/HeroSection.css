@@ -85,6 +85,12 @@
     flex-direction: column;
       text-align: center;
    }
+   .hero-row{
+    padding-left: 0!important;
+   }
+   .hero-col{
+    padding: 0;
+   }
     .above-hero-image {
         height: 800px;
         

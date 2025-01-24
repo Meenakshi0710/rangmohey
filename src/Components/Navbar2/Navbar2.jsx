@@ -32,24 +32,24 @@ const Navbar2 = () => {
       <div className="collapse navbar-collapse  justify-content-center nav-underline" id="navbarSupportedContent">
         <ul className="navbar-nav mb-2 mb-lg-0">
         <li className="nav-item me-3">
-          <Link className="nav-link" to="/">Home</Link>
+          <Link className="nav-link navLink" to="/">Home</Link>
         </li>
         <li className="nav-item me-3">
-          <Link className="nav-link" to="/about">About Us</Link>
+          <Link className="nav-link navLink" to="/about">About Us</Link>
         </li>
          <li className="nav-item dropdown me-3">
-                 <Link className="nav-link dropdown-toggle navLinks" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 <Link className="nav-link dropdown-toggle navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                    Categories
                  </Link>
                  <ul className="dropdown-menu">
-                   <li><Link className="dropdown-item" to="/category/lehngas">Lehngas</Link></li>
-                   <li><Link className="dropdown-item" to="/category/indowestern">IndoWestern</Link></li>
+                   <li><Link className="dropdown-item navLink" to="/category/lehngas">Lehngas</Link></li>
+                   <li><Link className="dropdown-item navLink" to="/category/indowestern">IndoWestern</Link></li>
                   
                  
                  </ul>
                </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/contact">Contact Info</Link>
+          <Link className="nav-link navLink" to="/contact">Contact Info</Link>
         </li>
          
          

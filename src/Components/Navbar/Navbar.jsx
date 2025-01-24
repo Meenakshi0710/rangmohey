@@ -79,8 +79,8 @@ const Navbar = () => {
             Categories
           </Link>
           <ul className="dropdown-menu">
-            <li><Link className="dropdown-item" to="/category/lehngas">Lehngas</Link></li>
-            <li><Link className="dropdown-item" to="/category/indowestern">IndoWestern</Link></li>
+            <li><Link className="dropdown-item navLinks" to="/category/lehngas">Lehngas</Link></li>
+            <li><Link className="dropdown-item navLinks" to="/category/indowestern">IndoWestern</Link></li>
            
           
           </ul>

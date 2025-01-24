@@ -15,6 +15,23 @@
   margin: 10px 0px 15px 30px;
   
 }
+.mainNavbar .dropdown-menu{
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white!important; 
+}
+.dropdown-item:hover, 
+.dropdown-item:focus {
+    background-color: transparent !important; /* Remove background color */
+    color: white !important; /* Keep text color unchanged */
+    text-decoration: none; /* Remove underline (optional) */
+}
+.dropdown-toggle:focus,
+.dropdown-toggle.active {
+  background-color: transparent !important; /* Remove the background color */
+  color: white !important; /* Keep the text color unchanged */
+  box-shadow: none !important; /* Remove focus/box shadow */
+  border: none !important; /* Remove any border changes */
+}
 .navbar-toggler:focus{
   outline: unset;
   border: unset;
@@ -34,6 +51,7 @@
 }
 .mainNavbar .navLinks:hover{
   color: white;
+  border-bottom: 1px white solid;
 }
 
 
@@ -73,4 +91,5 @@
   .logo {
     height: 60px; /* Responsive size for smaller screens */
   }
+  
 }
