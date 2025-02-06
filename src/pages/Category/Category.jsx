@@ -8,7 +8,7 @@ const Category = () => {
 console.log(categoryName)
     const categories = {
         lehngas: [
-          "/assets/card1.jpg",
+          "/assets/product/png images -01.png",
           "/assets/card2.jpg",
           "/assets/card3.jpg",
         ],
@@ -32,7 +32,7 @@ console.log(categoryName)
           <div className="card">
             <img
               src={image}
-              className="card-img-top img-fluid"
+              className="card-img-top img-fluid w-100"
               alt={`${categoryName}-${index}`}
             />
           </div>

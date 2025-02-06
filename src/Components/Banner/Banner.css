@@ -1,102 +1,35 @@
-.banner{
+.aboutHero {
   position: relative;
-  height: 150vh; /* Adjust based on your requirements */
-  
+}
+.aboutHero img{
+ 
+ width: 100%; /* Ensure image scales to its container */
+ height: auto; /* Maintain aspect ratio */
 }
 
-
-.banner > img{
-  filter: blur(6px);
+.hero-content {
   position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-.hero-overlay {
-  z-index: 1;
-  color: white;
-  padding: 0 20px;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  color: #A86434;
+  padding-left: 45px;
   text-align: center;
-
+  max-width: 50%;
  
   
 }
-
-
-.hero-overlay h1{
-  font-family: 'CustomFont2', sans-serif;
-  font-size: 8vw; /* Responsive font size */
-  line-height: 0.7;
+.hero-content h1{
+  font-family: 'CustomFont3';
+  font-size: 120px;
+  text-transform: uppercase;
+  margin: 0;
 }
-
-.hero-overlay .sharp-white-line {
-  background-color: white;
-  height: 3px;
-  width: 20vw; /* Relative width */
-  clip-path: polygon(0% 0%, 10% 50%, 0% 100%, 100% 100%, 90% 50%, 100% 0%);
-  margin: 0 auto; /* Center line */
-  
-}
-.overlay-image{
-  max-width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.hero-content p{
  
- 
-}
-.aboutButton{
-  
-  color: white;
-  padding:5px 40px;
-  font-size: 35px;
-  font-weight: 300;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-}
-.aboutButton:hover{
-  background: rgba(0, 0, 0, 0.9);
-  color: white;
+  font-size: 30px;
+  margin-top: 20px;
+
 }
 
-/* Media Queries */
-@media (min-width: 768px) {
-  .hero-overlay {
-    padding: 0 50px;
-    text-align: left;
-  }
 
-  .hero-overlay h1 {
-    font-size: 4vw; /* Larger font size for medium screens */
-  }
-
-  .hero-overlay .sharp-white-line {
-    width: 150px; /* Adjust for medium screens */
-  }
-
-  .aboutButton {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .hero-overlay {
-    padding: 0 150px;
-  }
-
-  .hero-overlay h1 {
-    font-size: 3vw; /* Even larger font size for large screens */
-  }
-
-  .aboutButton {
-    font-size: 24px;
-    padding: 10px 40px;
-  }
-}
- 

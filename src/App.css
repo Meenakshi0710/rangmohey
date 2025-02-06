@@ -18,5 +18,18 @@
     font-weight: bold;
     font-style: normal;
   }
- 
+ /*Not found page*/
+ .commonButton{
+  color: white;
+  padding:5px 20px;
+  font-size: 35px;
+  font-weight: 300;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+ }
+ .commonButton:hover{
+  background: rgba(0, 0, 0, 0.9);
+ }
   

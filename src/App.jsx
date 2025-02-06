@@ -14,6 +14,7 @@ import {
 } from 'react-router-dom';
 import Navbar2 from './Components/Navbar2/Navbar2';
 import { useEffect, useState } from 'react';
+import NotFound from './pages/NotFound';
 
 const Layout = () =>{
   const location = useLocation()
@@ -24,7 +25,7 @@ const Layout = () =>{
   return(
     <div className="app">
        {/* Conditional Navbar Rendering */}
-       {showNavbar2 ? <Navbar2 /> : <Navbar />}
+        <Navbar />
       <Outlet/>
       <Footer/>
     </div>
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "/category/:categoryName", // Add Dynamic Category Route
         element: <Category/> ,
+      },
+      {
+        path: "*", // Add Dynamic Category Route
+        element: <NotFound/> ,
       },
       
     ]

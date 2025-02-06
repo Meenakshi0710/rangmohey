@@ -5,19 +5,7 @@ const About = () => {
   return (
    <>
     <Metadata title="About us | RangMohey" />
-   <section className="aboutHero">
-  <img src="/assets/aboutHero.jpg" alt="Hero Section Image" className="img-fluid w-100" />
- 
-    <div className="container">
-    <div className="hero-content ">
-     
-    <h1>Hidden</h1>
-    <h1>Gems</h1>
-    <p >Embrace tradition with our stunning ethnic wear that celebrate cultural heritage </p>
-  </div>
-  </div>
   
-</section>
 
 
 
@@ -27,7 +15,30 @@ const About = () => {
         
 
    <section className='aboutSection container-fluid'>
+    <div className="row">
+   <h2 className="text-center aboutHeading display-3 display-md-2 display-sm-4">
+          About us
+        </h2>
+        </div>
+        <div className="row">
+          <div className="container">
+          <p style={{textAlign:"center"}}>At Rangmohey, we believe that fashion is more than just clothing—it's an expression of culture, heritage, and
+individuality. Rooted in the rich traditions of ethnic wear, our brand is a celebration of timeless elegance,
+craftsmanship, and artistic excellence. We bring together the essence of tradition and the charm of modern
+aesthetics, curating outfits that resonate with grace, grandeur, and sophistication.
+<br/><br/>From intricate handwoven fabrics to opulent embroidery, every piece at Rangmohey is designed with a deep
+appreciation for heritage while embracing contemporary trends. Our collections reflect the diversity of Indian
+craftsmanship, showcasing intricate designs, luxurious textures, and vibrant colors that capture the spirit of festivities,
+weddings, and everyday ethnic charm. Whether it’s a grand wedding ensemble or a subtle yet elegant traditional
+outfit, we ensure that each creation tells a unique story of art and culture.</p>
+          </div>
+        </div>
 
+        <div className="row">
+   <h2 className="text-center aboutHeading display-3 display-md-2 display-sm-4">
+          Our Collections
+        </h2>
+        </div>
 <div className="card mb-3 border-0 bg-transparent" >
   <div className="row g-4">
     <div className="col-md-5 col-12">

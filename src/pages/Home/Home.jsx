@@ -1,17 +1,13 @@
 import React from "react";
 import "./Home.css";
-import Banner from "../../Components/Banner/Banner";
 import Slider from "../../Components/Slider/Slider";
-
-import Metadata from "../../Components/Metadata";
-
-import Header from "../../Components/Header/Header";
 import HeroSection from "../../Components/Banner/HeroSection";
+import Carousel from "../../Components/Carasuel/Carousel";
 
 const Home = () => {
   return (
     <>
-      <HeroSection/>
+      <Carousel/>
 
       <section className="aboutSection container-fluid">
         <div className="card mb-3 border-0 bg-transparent">
@@ -20,7 +16,7 @@ const Home = () => {
               <img
                 src="/assets/png images-02.jpg"
                 className="img-fluid"
-                alt="..."
+                alt="aboutImage"
               />
             </div>
             <div className="col-md-7 col-12">
@@ -72,7 +68,7 @@ const Home = () => {
               <img
                 src="/assets/png images-02.jpg"
                 className="img-fluid"
-                alt="..."
+                alt="aboutImage"
               />
             </div>
           </div>
@@ -92,7 +88,6 @@ const Home = () => {
       {/*Section 3*/}
 
       <section className="belowHero">
-       
         <div className="below-hero-content d-flex justify-content-center align-items-center">
           <div className="row text-center container-fluid">
             <div className="col-md-7 mb-4">
@@ -102,7 +97,7 @@ const Home = () => {
                     <img
                       src="/assets/1030B.jpg"
                       className="card-img-top below-hero-images img-fluid"
-                      alt="..."
+                      alt="image"
                     />
                   </div>
                 </div>
@@ -111,7 +106,7 @@ const Home = () => {
                     <img
                       src="/assets/1031.jpg"
                       className="card-img-top below-hero-images img-fluid"
-                      alt="..."
+                      alt="image"
                     />
                   </div>
                 </div>
@@ -120,7 +115,7 @@ const Home = () => {
                     <img
                       src="/assets/1033.jpg"
                       className="card-img-top below-hero-images img-fluid"
-                      alt="..."
+                      alt="image"
                     />
                   </div>
                 </div>
@@ -129,7 +124,7 @@ const Home = () => {
                     <img
                       src="/assets/1034.jpg"
                       className="card-img-top below-hero-images img-fluid"
-                      alt="..."
+                      alt="image"
                     />
                   </div>
                 </div>

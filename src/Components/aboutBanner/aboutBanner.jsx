@@ -3,19 +3,19 @@ import React from 'react'
 const aboutBanner = () => {
   return (
     <>
-    <section>
-        <div className="container-fluid px-0 top-banner">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-5 col-md-6">
-                    <h1>Hidden</h1>
+   <section className="aboutHero">
+  <img src="/assets/aboutHero.jpg" alt="Hero Section Image" className="img-fluid w-100" />
+ 
+    <div className="container">
+    <div className="hero-content ">
+     
+    <h1>Hidden</h1>
     <h1>Gems</h1>
-    <p>Embrace tradition with our stunning ethnic wear that celebrate cultural heritage </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <p >Embrace tradition with our stunning ethnic wear that celebrate cultural heritage </p>
+  </div>
+  </div>
+  
+</section>
     </>
   )
 }

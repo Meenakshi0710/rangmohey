@@ -1,39 +1,13 @@
-.aboutHero {
-  position: relative;
-}
-.aboutHero img{
- margin-top: 130px;
- width: 100%; /* Ensure image scales to its container */
- height: auto; /* Maintain aspect ratio */
-}
-
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
-  color: #A86434;
-  padding-left: 45px;
-  text-align: center;
-  max-width: 50%;
+.aboutHeading{
  
+    font-size: 80px;
+    margin-top: 100px;
+   
+    font-weight: 400;
+    font-family: "customFont3";
+    text-transform: uppercase;
   
 }
-.hero-content h1{
-  font-family: 'CustomFont3';
-  font-size: 120px;
-  text-transform: uppercase;
-  margin: 0;
-}
-.hero-content p{
- 
-  font-size: 30px;
-  margin-top: 20px;
-
-}
-
-
-
  
   .aboutSection{
     background-image: url("/assets/rangmohey\ website\ design-12.jpg");
@@ -44,8 +18,8 @@
     padding:120px 40px 120px 40px
   }
   .aboutSection .card{
-margin-top: 150px;
-margin-bottom: 150px !important;
+margin-top: 100px;
+margin-bottom: 100px !important;
   }
   .aboutSection img{
     border: 10px solid #C88A90;
