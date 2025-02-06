@@ -8,7 +8,7 @@ const Category = () => {
 console.log(categoryName)
     const categories = {
         lehngas: [
-          "/assets/product/png images -01.png",
+          "/assets/product/png images -100.png",
           "/assets/card2.jpg",
           "/assets/card3.jpg",
         ],
