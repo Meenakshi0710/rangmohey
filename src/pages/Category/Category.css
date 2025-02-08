@@ -12,3 +12,15 @@
     text-transform: uppercase;
     
 }
+.categoryBackground .card {
+    overflow: hidden; /* Ensures the image doesn't overflow the card */
+    border-radius: 10px; /* Smooth edges */
+  }
+  
+  .categoryBackground .card-img-top {
+    transition: transform 0.4s ease-in-out; /* Smooth transition */
+  }
+  
+  .categoryBackground .card:hover .card-img-top {
+    transform: scale(1.1); /* Zooms in the image */
+  }

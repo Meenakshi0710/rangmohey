@@ -8,14 +8,26 @@ const Category = () => {
 console.log(categoryName)
     const categories = {
         lehngas: [
-          "/assets/product/png images -100.png",
-          "/assets/card2.jpg",
-          "/assets/card3.jpg",
+          "/assets/product/only models-01.png",
+          "/assets/product/only models-07.png",
+          "/assets/product/only models-08.png",
+          "/assets/product/only models-09.png",
+          "/assets/product/only models-10.png",
+          "/assets/product/only models-11.png",
+          "/assets/product/only models-12.png",
+         
         ],
         indowestern: [
-          "/assets/card1.jpg",
-          "/assets/card2.jpg",
-          "/assets/card3.jpg",
+          "/assets/product/only models-02.png",
+          "/assets/product/only models-03.png",
+          "/assets/product/only models-04.png",
+          "/assets/product/only models-05.png",
+          "/assets/product/only models-06.png",
+          "/assets/product/only models-13.png",
+          "/assets/product/only models-14.png",
+          "/assets/product/only models-15.png",
+          "/assets/product/only models-16.png",
+          "/assets/product/only models-18.png",
         ],
       };
   return (
@@ -28,11 +40,12 @@ console.log(categoryName)
     </h1>
     <div className="row">
       {categories[categoryName]?.map((image, index) => (
-        <div className="col-md-4 mb-4" key={index}>
-          <div className="card">
+        <div className="col-lg-4 col-md-6 col-sm-12 mb-4" key={index}>
+          <div className="card bg-transparent border-0">
             <img
               src={image}
               className="card-img-top img-fluid w-100"
+              style={{ height: "450px", objectFit: "cover" }} 
               alt={`${categoryName}-${index}`}
             />
           </div>

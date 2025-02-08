@@ -2,8 +2,8 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider2 from "react-slick";
-import { Link } from "react-router-dom";
 import "./Slider.css";
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -27,7 +27,21 @@ function SamplePrevArrow(props) {
 }
 
 const Slider = () => {
-  var settings = {
+  const cardData = [
+   "/assets/product/only models-01.png",
+          "/assets/product/only models-07.png",
+          "/assets/product/only models-08.png",
+          "/assets/product/only models-09.png",
+          "/assets/product/only models-10.png",
+          "/assets/product/only models-11.png",
+          "/assets/product/only models-12.png",
+          "/assets/product/only models-04.png",
+          "/assets/product/only models-05.png",
+          "/assets/product/only models-06.png",
+          "/assets/product/only models-13.png",
+  ];
+
+  const settings = {
     autoplay: true,
     infinite: true,
     speed: 500,
@@ -36,55 +50,18 @@ const Slider = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
+
   return (
     <div className="container-fluid py-4">
-    <Slider2 {...settings}>
-      <div className="productCardColor">
-        <div className="card h-100 border-0">
-          <img
-            src="/assets/card1.jpg"
-            className="w-100  cardImage"
-            alt="Cleaning"
-          />
-        </div>
-      </div>
-      <div className="productCardColor">
-        <div className="card h-100 border-0">
-          <img
-            src="/assets/card2.jpg"
-            className="w-100 cardImage"
-            alt="Cleaning"
-          />
-        </div>
-      </div>
-      <div className="productCardColor">
-        <div className="card h-100 border-0">
-          <img
-            src="/assets/card3.jpg"
-            className="w-100  cardImage"
-            alt="Cleaning"
-          />
-        </div>
-      </div>
-      <div className="productCardColor">
-        <div className="card h-100 border-0">
-          <img
-            src="/assets/1031.jpg"
-            className="w-100 cardImage"
-            alt="Cleaning"
-          />
-        </div>
-      </div>
-      <div className="productCardColor">
-        <div className=" h-100 border-0">
-          <img
-            src="/assets/1033.jpg"
-            className="w-100  cardImage"
-            alt="Cleaning"
-          />
-        </div>
-      </div>
-    </Slider2>
+      <Slider2 {...settings}>
+        {cardData.map((card, index) => (
+          <div className="productCardColor" key={index}>
+            <div className="card h-100 border-0">
+              <img src={card} className="w-100 cardImage" alt="image" />
+            </div>
+          </div>
+        ))}
+      </Slider2>
     </div>
   );
 };

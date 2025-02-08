@@ -1,77 +1,46 @@
-
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Layout from './Layout'; // Move Layout to a separate file
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
-import Navbar from './Components/Navbar/Navbar';
-import Footer from './Components/Footer/Footer';
 import Category from './pages/Category/Category';
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet,
-  useLocation
-} from 'react-router-dom';
-import Navbar2 from './Components/Navbar2/Navbar2';
-import { useEffect, useState } from 'react';
 import NotFound from './pages/NotFound';
 
-const Layout = () =>{
-  const location = useLocation()
-  const [showNavbar2, setShowNavbar2] = useState(false);
-  useEffect(() => {
-    setShowNavbar2(location.pathname === "/about");
-  }, [location]);
-  return(
-    <div className="app">
-       {/* Conditional Navbar Rendering */}
-        <Navbar />
-      <Outlet/>
-      <Footer/>
-    </div>
-  )
-}
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout/>,
-    children:[
-      {
-        path: "/",
-        element: <Home/>,
-      },
-      {
-        path: "/about",
-        element: <About/>,
-      },
-      {
-        path: "/contact",
-        element: <Contact/>,
-      },
-      {
-        path: "/category/:categoryName", // Add Dynamic Category Route
-        element: <Category/> ,
-      },
-      {
-        path: "*", // Add Dynamic Category Route
-        element: <NotFound/> ,
-      },
-      
-    ]
-  },
- 
-]);
-
 function App() {
- 
-  return (
-    <>
-      <div>
-     <RouterProvider router={router} />
+  const [activeSlide, setActiveSlide] = useState(0); // Move state here
 
-     </div>
-    </>
-  )
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout activeSlide={activeSlide} setActiveSlide={setActiveSlide} />, // Pass state
+      children: [
+        {
+          path: "/",
+          element: <Home setActiveSlide={setActiveSlide} />, // Pass state to Home
+        },
+        {
+          path: "/about",
+          element: <About />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+        {
+          path: "/category/:categoryName",
+          element: <Category />,
+        },
+        {
+          path: "*",
+          element: <NotFound />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
