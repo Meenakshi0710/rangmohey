@@ -54,11 +54,7 @@ const Navbar2 = () => {
          
          
         </ul>
-        <div className="d-lg-none mt-3">
-        <button className="btn searchButton" type="button" onClick={handleClick}>
-          Enquire Now
-        </button>
-      </div>
+       
         </div>
         <div className="ms-auto d-none d-lg-block">
         <button className="btn searchButton" type="submit" onClick={handleClick}>Enquire Now</button>
@@ -66,7 +62,10 @@ const Navbar2 = () => {
       
     </div>
   </nav>
-   
+   {/* Sticky Mobile Enquire Now Button */}
+ <button className="enquire-mobile-btn d-lg-none" onClick={handleClick}>
+        Enquire Now
+      </button>
 {/*Enquire Now Form*/}
   <button
         ref={ref}
