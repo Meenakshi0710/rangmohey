@@ -23,9 +23,11 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    // Scroll to the top on route change
-    window.scrollTo(0, 0);
-  }, [location]); // Runs on route change
+    if (location.pathname !== "/") {
+        // Scroll to top ONLY when navigating to a new page
+        window.scrollTo(0, 0);
+    }
+}, [location.pathname]);
   const ref = useRef(null);
   const refClose = useRef(null);
   const form = useRef();

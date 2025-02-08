@@ -97,7 +97,7 @@
   font-weight: 200!important;
 }
 .navbar-scrolled {
-  background: rgba(0, 0, 0, 0.9); /* Darker opaque background on scroll */
+  background: #61605E; /* Darker opaque background on scroll */
 }
 .navbar-unscrolled {
   background: rgba(0, 0, 0, 0.6); /* Darker opaque background on scroll */

@@ -24,10 +24,10 @@ const Carousel = ({ setActiveSlide }) => {
   <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <HeroSection/>
+    <img src="/assets/banner1.jpg" class="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
-   <Banner/>
+    <img src="/assets/banner2.jpg" class="d-block w-100" alt="..."/>
     </div>
     
   </div>

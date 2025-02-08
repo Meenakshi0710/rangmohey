@@ -8,6 +8,7 @@ const Layout = ({ activeSlide }) => {
 
     // Show Navbar2 only on Home Page and when activeSlide is 1
     const showNavbar2 = location.pathname === "/" && activeSlide === 1;
+    
   return (
     <div className="app">
      {showNavbar2 ? <Navbar2 /> : <Navbar />}

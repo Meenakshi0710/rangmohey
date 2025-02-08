@@ -9,7 +9,7 @@
     font-style: normal;
   }
  .navbar-scrolled2 {
-    background: rgba(235, 196, 187, 0.9); /* Darker opaque background on scroll */
+    background:  #61605E; /* Darker opaque background on scroll */
   }
   .navbar-unscrolled2 {
     background: rgba(235, 196, 187, 0.6); /* Darker opaque background on scroll */
