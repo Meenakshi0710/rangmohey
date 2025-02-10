@@ -96,7 +96,7 @@ const Navbar = () => {
     
    
   </div>
-  <div className="ms-auto  d-none d-lg-block">
+  <div className="ms-auto me-5 d-none d-lg-block">
       <button className="btn searchButton" type="submit" onClick={handleClick}>
         Enquire Now
       </button>

@@ -72,8 +72,38 @@
         background-color: rgba(235, 196, 187, 0.9); /* Desired background color */
     }
 }
-  @media (max-width: 768px) {
-    .logo {
-      height: 60px; /* Responsive size for smaller screens */
-    }
+@media (max-width: 768px) {
+  .aboutNavbar {
+    height: 60px; /* Reduce height but keep enough space */
+    padding: 5px 10px; /* Adjust padding */
+    display: flex;
+    align-items: center; /* Ensure everything stays aligned */
   }
+
+  /* Adjust Logo */
+  .aboutNavbar .logo {
+    max-height: 45px; /* Scale down */
+    margin: 5px 10px; /* Adjust spacing */
+  }
+
+  /* Adjust Toggler Button */
+  .navbar-toggler {
+    height: 40px; /* Adjust size */
+    width: 40px;
+    padding: 5px;
+  }
+
+  /* Adjust Navbar Items */
+  .navbar-nav {
+    gap: 5px; /* Reduce spacing */
+  }
+
+  .aboutNavbar .navLinks {
+    font-size: 18px; /* Smaller text */
+  }
+
+  .searchButton {
+    font-size: 18px; /* Reduce button text size */
+    padding: 8px 15px; /* Adjust padding */
+  }
+}
