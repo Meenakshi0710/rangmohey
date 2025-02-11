@@ -100,7 +100,7 @@
   background: #61605E; /* Darker opaque background on scroll */
 }
 .navbar-unscrolled {
-  background: rgba(0, 0, 0, 0.6); /* Darker opaque background on scroll */
+  background: rgba(0, 0, 0, 0.3); /* Darker opaque background on scroll */
 }
 
 @media (max-width: 1200px) {
@@ -112,6 +112,32 @@
   }
 }
 @media (max-width: 991px) {
+  .mainNavbar {
+    height: 70px; /* Reduce height but keep enough space */
+    padding: 5px 10px; /* Adjust padding */
+    display: flex;
+    align-items: center; /* Ensure everything stays aligned */
+  }
+
+  /* Adjust Logo */
+  .mainNavbar .logo {
+    max-height: 55px; /* Scale down */
+    margin: 5px 10px; /* Adjust spacing */
+  }
+
+  /* Adjust Toggler Button */
+  .navbar-toggler {
+    height: 40px; /* Adjust size */
+    width: 40px;
+    padding: 5px;
+  }
+
+ 
+
+  .searchButton {
+    font-size: 18px; /* Reduce button text size */
+    padding: 8px 15px; /* Adjust padding */
+  }
   .navbar-collapse {
     background: rgba(0, 0, 0, 0.8) !important; /* Dark background for mobile menu */
     width: 100%;

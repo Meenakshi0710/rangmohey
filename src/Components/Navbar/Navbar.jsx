@@ -34,6 +34,10 @@ useEffect(() => {
   const navbarCollapse = document.querySelector(".navbar-collapse");
 
   const handleNavLinkClick = () => {
+     // Ignore clicks on dropdown toggles
+     if (event.target.classList.contains("dropdown-toggle")) {
+      return;
+    }
     if (navbarCollapse.classList.contains("show")) {
       new window.bootstrap.Collapse(navbarCollapse).hide();
     }

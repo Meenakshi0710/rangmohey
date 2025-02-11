@@ -11,7 +11,7 @@ const Layout = ({ activeSlide }) => {
     
   return (
     <div className="app">
-     {showNavbar2 ? <Navbar2 /> : <Navbar />}
+     <Navbar />
       <Outlet />
       <Footer />
     </div>
