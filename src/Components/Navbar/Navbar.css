@@ -103,8 +103,41 @@
   background: rgba(0, 0, 0, 0.6); /* Darker opaque background on scroll */
 }
 
+@media (max-width: 1200px) {
+  
+  .mainNavbar .navLinks {
+   
+    font-size: 20px;
+   
+  }
+}
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.8) !important; /* Dark background for mobile menu */
+    width: 100%;
+    padding: 10px 0;
+  }
 
+  .navbar-nav {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8) !important; /* Background for mobile menu */
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar-nav .navLinks {
+    display: block; /* Ensure full width clickable */
+    padding: 10px;
+    color: white !important;
+  }
+
+  .dropdown-menu {
+    width: 100%; /* Full width dropdown */
+  }
+}
 @media (max-width: 768px) {
+  
   .mainNavbar {
     height: 60px; /* Reduce height but keep enough space */
     padding: 5px 10px; /* Adjust padding */
@@ -125,14 +158,7 @@
     padding: 5px;
   }
 
-  /* Adjust Navbar Items */
-  .navbar-nav {
-    gap: 5px; /* Reduce spacing */
-  }
-
-  .mainNavbar .navLinks {
-    font-size: 18px; /* Smaller text */
-  }
+ 
 
   .searchButton {
     font-size: 18px; /* Reduce button text size */

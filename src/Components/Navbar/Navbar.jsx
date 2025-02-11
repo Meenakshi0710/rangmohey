@@ -28,6 +28,28 @@ const Navbar = () => {
         window.scrollTo(0, 0);
     }
 }, [location.pathname]);
+
+useEffect(() => {
+  const navLinks = document.querySelectorAll(".nav-link");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+
+  const handleNavLinkClick = () => {
+    if (navbarCollapse.classList.contains("show")) {
+      new window.bootstrap.Collapse(navbarCollapse).hide();
+    }
+  };
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", handleNavLinkClick);
+  });
+
+  return () => {
+    navLinks.forEach((link) => {
+      link.removeEventListener("click", handleNavLinkClick);
+    });
+  };
+}, []);
+
   const ref = useRef(null);
   const refClose = useRef(null);
   const form = useRef();

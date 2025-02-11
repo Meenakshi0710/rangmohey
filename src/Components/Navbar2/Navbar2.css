@@ -51,7 +51,7 @@
     color: black;
   }
   .aboutNavbar .dropdown-menu{
-    background-color: rgba(235, 196, 187, 0.9); 
+    background-color: rgba(235, 196, 187, 0.9)!important; 
   }
   .aboutNavbar .dropdown-item:hover, 
 .dropdown-item:focus {
@@ -94,13 +94,7 @@
   }
 
   /* Adjust Navbar Items */
-  .navbar-nav {
-    gap: 5px; /* Reduce spacing */
-  }
-
-  .aboutNavbar .navLinks {
-    font-size: 18px; /* Smaller text */
-  }
+  
 
   .searchButton {
     font-size: 18px; /* Reduce button text size */
