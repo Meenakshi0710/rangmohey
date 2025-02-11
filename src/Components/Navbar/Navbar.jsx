@@ -11,10 +11,24 @@ const Result = () =>{
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false); 
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const closeMenu = (e) => {
+      if (!e.target.closest(".navbar-collapse") && menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("click", closeMenu);
+    return () => document.removeEventListener("click", closeMenu);
+  }, [menuOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolling(window.scrollY > window.innerHeight);
+      setScrolling(window.scrollY > 100);
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -91,6 +105,7 @@ useEffect(() => {
       aria-controls="navbarSupportedContent"
       aria-expanded="false"
       aria-label="Toggle navigation"
+      onClick={toggleMenu}
     >
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -107,8 +122,8 @@ useEffect(() => {
             Categories
           </Link>
           <ul className="dropdown-menu">
-            <li><Link className="dropdown-item navLinks" to="/category/lehngas">Lehngas</Link></li>
-            <li><Link className="dropdown-item navLinks" to="/category/indowestern">IndoWestern</Link></li>
+            <li><Link className="dropdown-item navLinks nav-link" to="/category/lehngas">Lehngas</Link></li>
+            <li><Link className="dropdown-item navLinks nav-link" to="/category/indowestern">IndoWestern</Link></li>
            
           
           </ul>
