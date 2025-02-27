@@ -1,13 +1,12 @@
 import React from "react";
 import "./Home.css";
 import Slider from "../../Components/Slider/Slider";
-import HeroSection from "../../Components/Banner/HeroSection";
 import Carousel from "../../Components/Carasuel/Carousel";
 
-const Home = ( { setActiveSlide }) => {
+const Home = () => {
   return (
     <>
-      <Carousel setActiveSlide={setActiveSlide}/>
+      <Carousel/>
 
       <section className="aboutSection container-fluid">
         <div className="card mb-3 border-0 bg-transparent">

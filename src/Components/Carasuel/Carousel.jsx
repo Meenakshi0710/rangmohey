@@ -2,22 +2,8 @@ import React, { useEffect } from 'react'
 import HeroSection from '../Banner/HeroSection'
 import Banner from '../Banner/Banner'
 
-const Carousel = ({ setActiveSlide }) => {
-  useEffect(() => {
-    const carouselElement = document.getElementById("carouselExampleAutoplaying");
-
-    if (carouselElement) {
-      carouselElement.addEventListener("slide.bs.carousel", (event) => {
-        setActiveSlide(event.to); // Update slide index when slide changes
-      });
-    }
-
-    return () => {
-      if (carouselElement) {
-        carouselElement.removeEventListener("slide.bs.carousel", () => {});
-      }
-    };
-  }, [setActiveSlide]);
+const Carousel = () => {
+ 
 
   return (
   <>

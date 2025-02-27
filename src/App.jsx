@@ -9,16 +9,16 @@ import Category from './pages/Category/Category';
 import NotFound from './pages/NotFound';
 
 function App() {
-  const [activeSlide, setActiveSlide] = useState(0); // Move state here
+  
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout activeSlide={activeSlide} setActiveSlide={setActiveSlide} />, // Pass state
+      element: <Layout />, // Pass state
       children: [
         {
           path: "/",
-          element: <Home setActiveSlide={setActiveSlide} />, // Pass state to Home
+          element: <Home />, // Pass state to Home
         },
         {
           path: "/about",
