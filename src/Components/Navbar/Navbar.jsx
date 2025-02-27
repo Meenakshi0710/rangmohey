@@ -95,7 +95,7 @@ useEffect(() => {
     <nav className={`navbar navbar-expand-lg mainNavbar ${scrolling ? "navbar-scrolled" : "navbar-unscrolled"}`}>
   <div className="container-fluid">
     <Link to="/">
-      <img src="/assets/black and white  logo.png" alt="Logo" className="logo" />
+      <img src="/assets/logo.png" alt="Logo" className="logo" />
     </Link>
     <button
       className="navbar-toggler ms-auto"

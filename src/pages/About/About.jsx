@@ -83,7 +83,7 @@ of artistry and grace.</p>
     </div>
 
   <div className="col-md-5 col-12">
-      <img src="/assets/png images-02.jpg" className="img-fluid" alt="..."/>
+      <img src="/assets/png images-03.jpg" className="img-fluid" alt="..."/>
     </div>
     </div>
 </div>
