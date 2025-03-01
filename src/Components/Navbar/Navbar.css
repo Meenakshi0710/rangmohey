@@ -2,12 +2,16 @@
   position: fixed;
   width: 100%;
  left: 0;
-  z-index: 2000;
+  z-index: 1200;
   transition: background 0.3s ease-in-out;
   font-family: "Poppins", serif;
   font-weight: 300;
   font-style: normal;
 }
+.modal {
+  z-index: 1300 !important;
+}
+
 .mainNavbar .logo{
   height: 90px; /* Adjust as needed */
   width: auto;
