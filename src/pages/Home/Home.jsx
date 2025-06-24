@@ -11,8 +11,7 @@ const Home = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: false,     // re-animate on every scroll into view
-      mirror: true,    // animate on scroll up too
+      once: true,     // re-animate on every scroll into view
       offset: 200,     // <- adjust this (try 200-400) to trigger later
     });
   }, []);
