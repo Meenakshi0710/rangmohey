@@ -80,10 +80,11 @@
   background: rgba(0, 0, 0, 0.7);
   color: white;
 }
+/* App.css or a separate EnquireNow.css */
 .enquire-mobile-btn {
   position: fixed;
   bottom: 15px;
-  right: 15px;
+  left: 15px; /* changed from right to left */
   background: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 12px 20px;
@@ -92,11 +93,13 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1050;
   border: none;
+  cursor: pointer;
 }
 
 .enquire-mobile-btn:hover {
   background: rgba(0, 0, 0, 0.7);
 }
+
 .mainNavbar .nav-underline{
   font-weight: 200!important;
 }

@@ -12,9 +12,107 @@
 .contactSection p {
     font-size: 30px;
 }
+.contact-box {
+   
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .contact-box:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  /* Remove Bootstrap's default blue background */
+.accordion-button {
+    background-color: #f7f7f7;
+    color: #333;
+    font-weight: 500;
+    font-size: 18px;
+    box-shadow: none !important;
+    border: none;
+    transition: background-color 0.4s ease, color 0.3s ease;
+  }
+  
+  /* Hover and active state */
+  .accordion-button:hover,
+  .accordion-button:not(.collapsed) {
+    background-color: #eaeaea;
+    color: #000;
+  }
+  
+  /* Accordion body animation */
+  .accordion-collapse {
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .accordion-body {
+    background-color: #fff;
+    padding: 20px;
+    font-size: 16px;
+    border-top: 1px solid #ddd;
+    animation: fadeIn 0.4s ease;
+  }
+  
+  /* Optional fade-in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Accordion item border & spacing */
+  .accordion-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  /* Optional: subtle hover scale effect for social links */
+.social p {
+    transition: transform 0.3s ease;
+  }
+  .social p:hover {
+    transform: scale(1.05);
+  }
+  .why-visit-box h5 {
+    color: #d94e66;
+    font-size: 24px;         /* match other headings */
+    font-weight: 600;        /* match your Contact form header */
+    margin-bottom: 15px;
+  }
+  
+  .why-visit-box ul {
+    padding-left: 0;
+    line-height: 1.7;
+    font-size: 16px;         /* similar to your form + FAQ body */
+    color: #555;             /* softer tone */
+  }
+  .contact-card {
+    height: 100%;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+  
+  /* Ensures both columns stretch equally */
+  
 @media (max-width: 768px) {
     .contactSection {
        
         padding-top: 180px;
+    }
+    .row.align-items-stretch > [class*='col-'] {
+      display: flex;
+    }
+  
+    .row.align-items-stretch > [class*='col-'] > .card {
+      flex-grow: 1;
     }
   }

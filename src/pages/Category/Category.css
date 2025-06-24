@@ -24,3 +24,39 @@
   .categoryBackground .card:hover .card-img-top {
     transform: scale(1.1); /* Zooms in the image */
   }
+  .category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .enquire-btn {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    padding: 10px 25px;
+    border-radius: 25px;
+  
+    /* Styling for visibility */
+    background-color: rgba(0, 0, 0, 0.7); /* dark translucent black */
+    color: white !important;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  }
+  
+  .category-card:hover .enquire-btn {
+    opacity: 1;
+  }
+  @media (max-width: 768px) {
+    .modal .row.g-0 {
+      flex-direction: column;
+    }
+  
+    .modal .col-md-6 {
+      max-height: none !important;
+    }
+  }
+  

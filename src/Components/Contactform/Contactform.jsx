@@ -26,7 +26,7 @@ const Contactform = () => {
   return (
     <div className="row justify-content-center contactForm">
       <div className="col-md-10">
-        <form ref={form} onSubmit={sendEmail}>
+      <form ref={form} onSubmit={sendEmail} className="d-flex flex-column h-100">
           <div className="row mb-5">
             <div className="col">
               <input
@@ -76,7 +76,7 @@ const Contactform = () => {
               required
             ></textarea>
           </div>
-          <div className="d-grid ">
+          <div className="d-grid mt-auto mb-0 pb-0">
             <button type="submit" className="btn btn-primary">
               Send Message
             </button>

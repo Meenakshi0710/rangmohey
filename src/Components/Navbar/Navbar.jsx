@@ -122,7 +122,7 @@ useEffect(() => {
             Categories
           </Link>
           <ul className="dropdown-menu">
-            <li><Link className="dropdown-item navLinks nav-link" to="/category/lehngas">Lehngas</Link></li>
+            <li><Link className="dropdown-item navLinks nav-link" to="/category/lehnga">Lehnga</Link></li>
             <li><Link className="dropdown-item navLinks nav-link" to="/category/indowestern">IndoWestern</Link></li>
            
           
@@ -138,9 +138,9 @@ useEffect(() => {
    
   </div>
   <div className="ms-auto me-5 d-none d-lg-block">
-      <button className="btn searchButton" type="submit" onClick={handleClick}>
+      <Link to="/contact" ><button className="btn searchButton" type="submit">
         Enquire Now
-      </button>
+      </button></Link>
     </div>
   </div>
 </nav>

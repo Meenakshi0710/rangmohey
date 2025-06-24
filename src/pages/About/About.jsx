@@ -1,7 +1,14 @@
 import React from 'react'
 import "./About.css"
 import Metadata from '../../Components/Metadata'
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: true,      offset: 250, });
+  }, []);
+  
   return (
    <>
     <Metadata title="About us | RangMohey" />
@@ -15,13 +22,13 @@ const About = () => {
         
 
    <section className='aboutSection container-fluid'>
-    <div className="row">
+    <div className="row" data-aos="fade-down">
    <h2 className="text-center aboutHeading display-3 display-md-2 display-sm-4">
           About us
         </h2>
         </div>
         <div className="row">
-          <div className="container">
+          <div className="container" data-aos="fade-up">
           <p style={{textAlign:"center"}}>At Rangmohey, we believe that fashion is more than just clothing—it's an expression of culture, heritage, and
 individuality. Rooted in the rich traditions of ethnic wear, our brand is a celebration of timeless elegance,
 craftsmanship, and artistic excellence. We bring together the essence of tradition and the charm of modern
@@ -34,12 +41,12 @@ outfit, we ensure that each creation tells a unique story of art and culture.</p
           </div>
         </div>
 
-        <div className="row">
+        <div className="row" data-aos="fade-down">
    <h2 className="text-center aboutHeading display-3 display-md-2 display-sm-4">
           Our Collections
         </h2>
         </div>
-<div className="card mb-3 border-0 bg-transparent" >
+<div className="card mb-3 border-0 bg-transparent"  data-aos="fade-right">
   <div className="row g-4">
     <div className="col-md-5 col-12">
       <img src="/assets/png images-02.jpg" className="img-fluid" alt="..."/>
@@ -62,7 +69,7 @@ start to your forever story</p>
   </div>
 </div>
 <div className="border-bottom"></div>
-<div className="card border-0 bg-transparent" >
+<div className="card border-0 bg-transparent" data-aos="fade-left" >
   <div className="row g-4">
    
     <div className="col-md-7 col-12">
