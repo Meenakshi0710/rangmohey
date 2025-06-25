@@ -127,7 +127,7 @@ const Category = () => {
   ref={modalRef}
 >
   <div className="modal-dialog modal-dialog-centered modal-lg">
-    <div className="modal-content" style={{ maxHeight: "90vh", overflow: "hidden" }}>
+    <div className="modal-content" style={{ maxHeight: "90vh", overflowY: "auto"}}>
       <form ref={form} onSubmit={sendEmail}>
         <div className="modal-header">
           <h5 className="modal-title" id="enquiryModalLabel">
@@ -164,7 +164,7 @@ const Category = () => {
             {/* Right: Form */}
             <div
               className="col-md-6 p-4 d-flex flex-column"
-              style={{ maxHeight: "60vh", overflowY: "auto" }}
+              style={{ flexGrow: 1, overflowY: "auto" }}
             >
               {showConfirmation ? (
                 <div className="alert alert-success text-center" role="alert">
