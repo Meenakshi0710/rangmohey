@@ -10,11 +10,14 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 const Home = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
-      once: true,     // re-animate on every scroll into view
-      offset: 200,     // <- adjust this (try 200-400) to trigger later
+      duration: 1200,
+      once: true,
+      offset: 200,
+      mirror: false, // prevents repeated triggering
+      easing: 'ease-in-out', // smoother
     });
   }, []);
+  
   
 
   return (

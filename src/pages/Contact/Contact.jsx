@@ -9,12 +9,16 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 const Contact = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration
-      once: true      // Only animate once
-    });
-  }, []);
+
+    useEffect(() => {
+      AOS.init({
+        duration: 1200,
+        once: true,
+        mirror: false, // prevents repeated triggering
+        easing: 'ease-in-out', // smoother
+      });
+    }, []);
+    
   return (
     <>
        <Metadata title="Contact | RangMohey" />

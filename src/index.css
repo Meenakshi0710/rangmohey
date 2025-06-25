@@ -17,9 +17,17 @@ ul, ol{
   margin: 0;
   padding: 0;
 }
-
-body {
+html, body {
   overflow-x: hidden;
- }
+}
 
- 
+[data-aos] {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}

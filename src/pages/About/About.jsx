@@ -6,8 +6,15 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 const About = () => {
   useEffect(() => {
-    AOS.init({ duration: 1200, once: true,      offset: 250, });
+    AOS.init({
+      duration: 1200,
+      once: true,
+      offset: 250,
+      mirror: false, // prevents repeated triggering
+      easing: 'ease-in-out', // smoother
+    });
   }, []);
+  
   
   return (
    <>
